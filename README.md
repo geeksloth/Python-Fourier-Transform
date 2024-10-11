@@ -1,6 +1,30 @@
 # Python-Fourier-Transform
 Discrete and Fast Fourier Transform naive implementation in Python. Naive implemented by not using any package accept `math`.
 
+**Forward Fourier Transform**
+```math
+{\displaystyle {\widehat {f}}(\xi )=\int _{-\infty }^{\infty }f(x)\ e^{-i2\pi \xi x}\,dx}
+```
+for all values of $ξ$ produces the frequency-domain function. The integral can diverge at some frequencies. 
+
+
+**Inverse Fourier Transform**
+```math
+{\displaystyle f(x)=\int _{-\infty }^{\infty }{\widehat {f}}(\xi )\ e^{i2\pi \xi x}\,d\xi ,\quad \forall \ x\in \mathbb {R} } 
+```
+is a representation of $f(x)$ as a weighted summation of complex exponential functions.
+
+
+**The discrete Fourier transform (DFT) is defined by the formula:**
+```math
+{\displaystyle X_{k}=\sum _{n=0}^{N-1}x_{n}e^{-{\frac {2\pi i}{N}}nk},}
+```
+where $k{\displaystyle k}$ is an integer ranging from $0$ to $N−1$
+
+for the inverse DFT and further more mathematical proof, see [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) and [Cooley-Tukey FFT](https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm)
+
+
+## Naive Implementation
 
 ```python
 import math
